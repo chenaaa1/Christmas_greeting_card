@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣诞节快乐</title>
+    <!-- 01  CSS样式文件 -->
+    <!-- 1.1 链接到单独的 CSS 文件 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 1.2 在结构里面写CSS  -->
+    <style></style>
+
+    <!-- 02 第三 JS 文件 -->
+</head>
+
+<body>
+    
+    <!-- 05 如果在这里写JS 为了保证JS正常运行。我们要做一些处理  -->
+    <!-- 下雪控制的 JS代码 -->
+    <script src="./js/snow.js"></script>
+    <!-- scrript 标签如果 我们写了 src属性，那么就不应该在标签的开始-结束 中 写JS代码 -->
+    <script src="./js/main.js"></script>
+
+    <!-- 03 结构 -->
+    <div class="sence1">
+        <div class="moon"></div>
+        <!-- 设置按钮和其位置 -->
+        <div class="anniu">
+            <button type="submit" id="btn" onclick="btn()">场景1</button>
+            <button type="submit" id="btn2" onclick="btn2()">场景2</button>
+        </div>
+
+        <!-- 男角色1 的版心 -->
+        <div class="wrapper">
+            <div class="boy"></div>
+            <!-- <button type="submit" id="btn" onclick="btn()">按钮1</button>
+            <button type="submit" id="btn2" onclick="btn2()">按钮2</button> -->
+        </div>
+
+        <img src="./images/trees.png" class="tree">
+
+        <!-- 下雪的场景 -->
+        <canvas id="snow" width="1650" height="900"></canvas>
+        
+    </div>
+
+
+    <!-- 其它场景 -->
+    <div class="sence2" style="display: none; opacity: 0;">
+        <!-- 男2 -->
+        <div class="boy-wrapper">
+            <div class="boy"></div>
+            <div class="boy" id="hide"></div>
+        </div>
+        <!-- 女1 -->
+        <div class="girl-wrapper">
+            <div class="girl"></div>
+        </div>
+
+        <div class="heart-box">
+            <!-- 爱心由一个正方形和2个圆形 -->
+            <div class="heart">
+
+            </div>
+        </div>
+
+
+        <!-- 插入对话框 -->
+        <div class="chatBox">
+			劝君莫惜花前醉，今年花谢，明年花谢，白了人头
+		</div>
+
+        <div class="chatBox2">
+			但愿君心似我心，定不负相思意!
+		</div>
+
+        <div class="book"></div>
+
+    </div>
+
+
+
+    <!-- 04 本项目的JS 文件 -->
+    <script>
+        run();
+    </script>
+</body>
+
+</html>

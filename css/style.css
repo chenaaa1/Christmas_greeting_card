@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* 最小宽度与最小高度 */
+    min-width: 1650px;
+    min-height: 900px;
+
+}
+
+.moon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 1300px;
+    top: 60px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 yellow;
+}
+
+/* 书本 */
+.book{
+    background-image: url(../images/book2.png);
+    width: 1px;
+    height: 1px;
+    left: -10px;
+    top: 210px;
+    position: absolute;
+    padding: 7px;
+    display: none;
+    transition: left 2s linear;
+}
+
+
+/* 对话框 */
+.chatBox {
+    width: 200px;
+    height: 50px;
+    left: 250px;
+    top: 180px;
+    border: 1px solid #333;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+
+.chatBox::before{
+    position: absolute;
+    content: '';
+    top:25px;
+    left: -10px;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-right:10px solid #333;
+} 
+
+/* 对话框2 */
+.chatBox2 {
+    width: 100px;
+    height: 60px;
+    left: 310px;
+    top: 180px;
+    border: 1px solid #333;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+
+.chatBox2::before{
+    position: absolute;
+    content: '';
+    top:25px;
+    left: -10px;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-right:10px solid #333;
+} 
+
+/* 设置按钮的位置 */
+.anniu{
+    position: absolute;
+    left: 770px;
+    top: 870px;
+    display: none;
+}
+
+.sence1 {
+    /* 设置大小，背景等 */
+    background-image: url(../images/page-a-bg.png);
+    /* 适应起来有问题 */
+    /* height: 100vh;  */
+    width: 1650px;
+    height: 900px;
+    background-size: cover;
+    position: relative;
+}
+.sence1 img.tree {
+    position: absolute;
+    top: 650px;
+    left: 45px;
+    width: 300px;
+}
+.sence1 .wrapper {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 780px;
+    left: 0px;
+    transition: left 1s linear;
+}
+
+.boy {
+
+    background-image: url(../images/boy.png);
+    background-size: cover;
+    /* 350 * 407 */
+    width: 68px;
+    height: 80px;
+    /* background-position-x: -1000%; */
+    transform: rotateY(180deg);
+}
+
+/* 第二场景 */
+.sence2 {
+    /* width: 1650px;
+    height: 900px; */
+    width: 480px;
+    height: 285px;
+    background-image: url(../images/page-a-window-bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+    position: relative;
+}
+
+/* 女角色 */
+.girl {
+    background-image: url(../images/girl.png);
+    background-size: cover;
+    /* 350 * 407 */
+    width: 68px;
+    height: 80px;
+    /* background-position-x: -1000%; */
+    transform: rotateY(180deg);
+}
+
+.sence2 .boy-wrapper{
+    position: absolute;
+    top: 200px;
+    transition: left 2s linear;
+}
+.sence2 .girl-wrapper {
+    position: absolute;
+    top: 200px;
+    /* 女孩行走的时间 */
+    transition: left 2s linear;
+}
+
+.sence2 .boy-wrapper {
+    left: 0px;
+}
+
+.sence2 .girl-wrapper {
+    left: 400px;
+}
+/* 隐藏的男角色头部 */
+div#hide {
+    background-image: url(../images/boy.png);
+    position: absolute;
+    background-position-x: -1400%;
+    top: 0;
+    transform: rotateY(0deg);
+    /* 默认是不显示 */
+    display: none;
+}
+
+
+/* 小爱心样式 */
+.heart-box {
+    margin: 100px;
+    width: 75px;
+    height: 75px;
+    animation: breaking 2s linear infinite;
+    transform: rotate(-45deg);
+    position: absolute;
+    top:30px;
+    left: 160px;
+    display: none;
+}
+.heart-box .heart {
+    width: 50px;
+    height: 50px;
+    /* background: linear-gradient(90deg, red, rgba(255, 0, 0, 0.5)); */
+    background-color: red;
+}
+/* 2个圆形 */
+/* 我们使用伪元素来实现 */
+.heart-box .heart::before {
+    /* content: "前面的伪元素"; */
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* background-color: rgba(0, 0, 255, 0.408); */
+    /* background: linear-gradient(90deg, red 0%, rgba(255,0,0, 0.75) 100%); */
+    top: -25px;
+    border-radius: 50%;
+    background-color: red;
+}
+.heart-box .heart::after {
+    /* content: "后面的伪元素"; */
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    /* background-color: rgba(255, 0, 0, 0.478); */
+    /* background: linear-gradient(90deg, rgba(255,0,0, 0.75) 0%, rgba(255,0,0, 0.5) 100%) ; */
+    left: 25px;
+    top: -50px;
+    border-radius: 50%;
+    background-color: red;
+}
+@keyframes breaking {
+    0% {
+        transform: scale(0.1) rotate(-45deg);
+        opacity: 0.1;
+    }
+    50%{
+        transform: scale(0.5) rotate(-45deg);
+        opacity: 0.6;
+    }
+    100%{
+        transform: scale(0.1) rotate(-45deg);
+        opacity: 0.1;
+    }
+}
